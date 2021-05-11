@@ -1,6 +1,7 @@
 body {
   margin: 0px;
   background: #EBF5EE;
+  font-family: 'Open Sans', sans-serif;
 }
 header {
   display: flex;
@@ -23,7 +24,6 @@ header .menu {
 header .menu a {
   margin-inline: 1vw;
   height: 80px;
-  font-family: 'Open Sans', sans-serif;
   color: #EBF5EE;
   font-size: 24px;
 }
@@ -88,6 +88,45 @@ header .icons .nav-button {
     position: relative;
     top: 3px;
     display: inline-block;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #283044;
+  padding: 0 6% 20px 6%;
+}
+footer .footer-nav {
+  color: #EBF5EE;
+}
+footer .footer-nav a {
+  display: block;
+  text-decoration: none;
+  color: #EBF5EE;
+  line-height: 28px;
+  margin: 4px 0;
+}
+footer .footer-nav a h3 {
+  font-weight: normal;
+  margin-bottom: 6px;
+}
+footer .footer-nav a img {
+  margin-bottom: -2px;
+}
+@media (max-width: 1280px) {
+  .footer-nav.hidden-1 {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .footer-nav.hidden-2 {
+    display: none;
+  }
+}
+@media (max-width: 450px) {
+  footer {
+    flex-direction: column;
   }
 }
 /*# sourceMappingURL=style.css.map */
