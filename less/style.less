@@ -2,8 +2,10 @@
 @blue: #78A1BB;
 @lightblue: #EBF5EE;
 @font1: 'Open Sans', sans-serif;
+@font-for-price: 'Fira Sans', sans-serif;
 body{
   margin: 0px;
+  background: @lightblue;
 }
 header {
   display: flex;
@@ -21,12 +23,56 @@ header {
     margin-left: 40px;
     line-height: 80px;
     a{
-      margin-inline: 20px;
+      margin-inline: 1vw;
       height: 80px;
       font-family: @font1;
       color: @lightblue;
       font-size: 24px;
     }
-
+  }
+  .icons{
+    position: absolute;
+    right: 6vw;
+    top: 20px;
+    img{
+      justify-content: center;
+      margin-left: 40px;
+    }
+    .nav-button{
+      display: none;
+    }
+  }
+}
+@media (max-width: 1450px) {
+  header {
+    .menu {
+      a {
+        font-size: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 1280px) {
+  header {
+    .menu {
+    display: none;
+    }
+    .icons {
+      .nav-button {
+        position: relative;
+        top: 3px;
+        display: inline-block;
+      }
+    }
+  }
+}
+@media (max-width: 768px){
+  header{
+    .logo{
+      margin: 0;
+    }
+    .menu{
+      display: none;
+    }
   }
 }

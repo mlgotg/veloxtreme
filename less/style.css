@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  background: #EBF5EE;
 }
 header {
   display: flex;
@@ -19,10 +20,45 @@ header .menu {
   line-height: 80px;
 }
 header .menu a {
-  margin-inline: 20px;
+  margin-inline: 1vw;
   height: 80px;
   font-family: 'Open Sans', sans-serif;
   color: #EBF5EE;
   font-size: 24px;
+}
+header .icons {
+  position: absolute;
+  right: 6vw;
+  top: 20px;
+}
+header .icons img {
+  justify-content: center;
+  margin-left: 40px;
+}
+header .icons .nav-button {
+  display: none;
+}
+@media (max-width: 1450px) {
+  header .menu a {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1280px) {
+  header .menu {
+    display: none;
+  }
+  header .icons .nav-button {
+    position: relative;
+    top: 3px;
+    display: inline-block;
+  }
+}
+@media (max-width: 768px) {
+  header .logo {
+    margin: 0;
+  }
+  header .menu {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
