@@ -9,11 +9,14 @@ body{
 }
 header {
   display: flex;
-  .logo {
-    margin-left: 6%;
-    img {
+  .icon {
+    .logo {
+      margin-left: 6%;
       width: 350px;
       height: 80px;
+    }
+    .logo-mob{
+      display: none;
     }
   }
   background: @darkblue;
@@ -68,11 +71,42 @@ header {
 }
 @media (max-width: 768px){
   header{
-    .logo{
+    .icon .logo{
       margin: 0;
     }
     .menu{
       display: none;
+    }
+  }
+}
+@media (max-width: 700px) {
+  header {
+    height: 60px;
+    .icon {
+      .logo {
+        display: none;
+      }
+      .logo-mob {
+        margin-left: 6vw;
+        display: inline-block;
+      }
+    }
+    .icons{
+      position: absolute;
+      right: 6vw;
+      top: 15px;
+      img{
+        justify-content: center;
+        margin-left: 27px;
+        height: 30px;
+        width: 30px;
+      }
+      .nav-button {
+
+        position: relative;
+        top: 3px;
+        display: inline-block;
+      }
     }
   }
 }
