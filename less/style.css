@@ -2,42 +2,67 @@ body {
   margin: 0px;
   background: #EBF5EE;
 }
-header {
+body header {
   display: flex;
   background: #283044;
   height: 80px;
   width: 100%;
 }
-header .icon .logo {
-  margin-left: 6%;
+body header .icon .logo {
+  margin-left: 6vw;
   width: 350px;
   height: 80px;
 }
-header .icon .logo-mob {
+body header .icon .logo-mob {
   display: none;
 }
-header .menu {
+body header .menu {
   margin-left: 40px;
   line-height: 80px;
 }
-header .menu a {
+body header .menu a {
   margin-inline: 1vw;
   height: 80px;
   font-family: 'Open Sans', sans-serif;
   color: #EBF5EE;
   font-size: 24px;
 }
-header .icons {
+body header .icons {
   position: absolute;
   right: 6vw;
   top: 20px;
 }
-header .icons img {
+body header .icons img {
   justify-content: center;
   margin-left: 40px;
 }
-header .icons .nav-button {
+body header .icons .nav-button {
   display: none;
+}
+body .block1 img {
+  height: 970px;
+  width: 100%;
+}
+body .block1 .rectangle {
+  background: rgba(235, 245, 238, 0.5);
+  position: absolute;
+  width: 54%;
+  height: 239px;
+  right: 0px;
+  top: 550px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
+  color: #283044;
+}
+body .block1 .rectangle .title1 {
+  position: relative;
+  left: 52px;
+  top: 52px;
+}
+body .block1 .rectangle .title2 {
+  display: block;
+  position: relative;
+  top: 70px;
 }
 @media (max-width: 1450px) {
   header .menu a {
