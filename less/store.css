@@ -23,52 +23,82 @@
 .store-section .filter-section .filters .collapsible {
   background-color: #EBF5EE;
   cursor: pointer;
-  padding: 18px;
+  padding: 16px 8px;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 15px;
+  font-size: 18px;
+  border-bottom: 1px solid #78A1BB;
 }
-.store-section .filter-section .filters .active,
-.store-section .filter-section .filters .collapsible:hover {
-  background-color: #dee3e0;
+.store-section .filter-section .filters .collapsible .arrow {
+  transform: rotate(270deg);
+  margin: 0 10px;
+}
+.store-section .filter-section .filters .active {
+  border-bottom: none;
+}
+.store-section .filter-section .filters .active .arrow {
+  transform: rotate(0deg);
 }
 .store-section .filter-section .filters .content {
-  padding: 0 18px;
-  display: none;
+  padding: 0 18px 0 48px;
+  display: block;
   overflow: hidden;
+  border-bottom: 1px solid #78A1BB;
 }
-.store-section .product-section {
+.store-section .filter-section .filters .content .checkbox-filter {
+  padding: 8px 4px;
+}
+.store-section .filter-section .filters .content .checkbox-filter input[type="checkbox"] {
+  border: 1px solid #78A1BB;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  background: #EBF5EE;
+  appearance: none;
+  cursor: pointer;
+}
+.store-section .filter-section .filters .content .checkbox-filter input[type="checkbox"]:checked {
+  background-color: #283044;
+  background-image: url("../image/icons/check-mark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.store-section .filter-section .filters .content .checkbox-filter label {
+  display: inline-block;
+  cursor: pointer;
+}
+.product-section {
   display: flex;
   flex: 1;
   vertical-align: top;
 }
-.store-section .product-section .store-header-sort {
+.product-section .store-header-sort {
   margin: 0 0 0 auto;
 }
-.store-section .product-section .store-header-sort .sort-label {
+.product-section .store-header-sort .sort-label {
   padding: 16px;
 }
-.store-section .product-section .store-header-sort .sort-label h2 {
+.product-section .store-header-sort .sort-label h3 {
   display: inline-block;
   font-weight: normal;
   margin: 0;
   line-height: 36px;
 }
-.store-section .product-section .store-header-sort .sort-label select {
+.product-section .store-header-sort .sort-label select {
   font-family: 'Open Sans', sans-serif;
   background-color: #EBF5EE;
   border: none;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 19px;
   background-image: url("../image/icons/down-arrow.svg");
   background-repeat: no-repeat;
   background-position: right center;
   appearance: none;
   padding-right: 30px;
 }
-.store-section .product-section .store-header-sort .sort-label select option {
+.product-section .store-header-sort .sort-label select option {
   background: #EBF5EE;
   border: 1px solid #78A1BB;
   min-height: 36px;
