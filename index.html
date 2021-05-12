@@ -13,9 +13,8 @@
 <header>
     <a href="index.html" class="icon">
             <img src="image/logo.svg" class="logo">
-            <img src="image/logo-mobile.svg"class="logo-mob">
+            <img src="image/logo-mobile.svg" class="logo-mob">
     </a>
-    </div>
     <div class="menu">
         <a>Велосипеди</a>
         <a>Запчастини</a>
@@ -26,10 +25,19 @@
         <img src="image/icons/loupe.svg">
         <img src="image/icons/account.svg">
         <img src="image/icons/shopping-backet.svg">
-        <img src="image/icons/menu.svg" class="nav-button">
+        <img src="image/icons/menu.svg" onclick="openNav()" class="nav-button">
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
     </div>
 </header>
 <div class="block1">
+    <img src="image/bike-background.png">
     <div class="rectangle">
         <span class="title1">
             ВЕЛОСЕЗОН ВІДКРИТО
@@ -38,11 +46,52 @@
             ЧАС ВИБИРАТИ НОВИЙ ВЕЛОСИПЕД!
         </span>
     </div>
-    <img src="image/img.png">
+</div>
+<div class="hits">
+    <span class="title">ХІТИ ПРОДАЖІВ</span>
+    <div class="container">
+        <div class="item" id="1">
+            <img src="image/bikes/bike1.png">
+            <span class="model">Trek Marlin 5 2020</span>
+            <span class="price">12999₴</span>
+        </div>
+        <div class="item" id="2">
+            <img src="image/bikes/bike2.png">
+            <span class="model">Trek Marlin 5 2020</span>
+            <span class="price">12999₴</span>
+        </div>
+        <div class="item" id="3">
+            <img src="image/bikes/bike3.png">
+            <span class="model">Trek Marlin 5 2020</span>
+            <span class="price">12999₴</span>
+        </div>
+        <div class="item" id="4">
+            <img src="image/bikes/bike4.png">
+            <span class="model">Trek Marlin 5 2020</span>
+            <span class="price">12999₴</span>
+        </div>
+        <div class="item" id="5">
+            <img src="image/bikes/bike5.png">
+            <span class="model">Trek Marlin 5 2020</span>
+            <span class="price">12999₴</span>
+        </div>
+        <div class="item" id="6">
+            <img src="image/bikes/bike6.png">
+            <span class="model">Trek Marlin 5 2020</span>
+            <span class="price">12999₴</span>
+        </div>
+    </div>
 </div>
 
-<div class="fill"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
 
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Велосипеди</a>
+    <a href="">Запчастини</a>
+    <a href="">Аксесуари</a>
+    <a href="">Контакти</a>
+</div>
+<div class="fill"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
 <footer>
     <div class="footer-nav hidden-2">
         <a href="#"><h3>Велосипеди</h3></a>

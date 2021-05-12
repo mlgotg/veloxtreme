@@ -1,6 +1,7 @@
 body {
   margin: 0px;
   background: #EBF5EE;
+  font-family: 'Open Sans', sans-serif;
 }
 body header {
   display: flex;
@@ -23,7 +24,6 @@ body header .menu {
 body header .menu a {
   margin-inline: 1vw;
   height: 80px;
-  font-family: 'Open Sans', sans-serif;
   color: #EBF5EE;
   font-size: 24px;
 }
@@ -38,81 +38,211 @@ body header .icons img {
 }
 body header .icons .nav-button {
   display: none;
+  cursor: pointer;
+}
+body .block1 {
+  position: relative;
 }
 body .block1 img {
-  height: 970px;
   width: 100%;
+  height: 970px;
+  object-fit: cover;
 }
 body .block1 .rectangle {
   background: rgba(235, 245, 238, 0.5);
   position: absolute;
-  width: 54%;
-  height: 239px;
-  right: 0px;
+  right: 0;
   top: 550px;
-  font-family: 'Open Sans', sans-serif;
+  width: 70%;
+  height: 239px;
   font-size: 40px;
   color: #283044;
 }
 body .block1 .rectangle .title1 {
-  position: relative;
-  left: 52px;
+  position: absolute;
+  margin-left: 6vw;
   top: 52px;
 }
 body .block1 .rectangle .title2 {
+  position: absolute;
+  right: 6vw;
+  margin-left: 6vw;
+  bottom: 52px;
+}
+body .hits {
+  margin: 120px 6vw 120px 6vw;
+  color: #283044;
+  flex-wrap: wrap;
+}
+body .hits .title {
+  margin-bottom: 25px;
+  font-size: 34px;
+  display: flex;
+  align-items: center;
+}
+body .hits .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+body .hits .container .item {
+  margin-top: 50px;
+  width: 500px;
+  height: 430px;
+  background: #EBF5EE;
+  border: 2px solid #78A1BB;
+  box-sizing: border-box;
+}
+body .hits .container .item img {
+  width: 100%;
+  height: 290px;
+}
+body .hits .container .item .model {
+  margin: auto;
+  font-size: 34px;
+  line-height: 46px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+body .hits .container .item .price {
+  margin: auto;
+  font-family: Fira Sans, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 41px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+body .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #283044;
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  transition: 0.5s;
+  font-family: 'Open Sans', sans-serif;
+}
+body .sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #EBF5EE;
   display: block;
-  position: relative;
-  top: 70px;
+  transition: 0.3s;
+}
+body .sidenav a:hover {
+  transition: right;
+  text-decoration-line: underline;
+}
+body .sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 @media (max-width: 1450px) {
-  header .menu a {
+  body header .menu a {
     font-size: 20px;
   }
 }
-@media (max-width: 1280px) {
-  header .menu {
+@media (max-width: 1290px) {
+  body header .menu {
     display: none;
   }
-  header .icons .nav-button {
+  body header .icons .nav-button {
     position: relative;
     top: 3px;
     display: inline-block;
   }
+  body .block1 .rectangle {
+    height: 200px;
+    font-size: 30px;
+  }
+}
+@media (max-width: 940px) {
+  body .block1 .rectangle {
+    width: 100vw;
+    font-size: 30px;
+  }
 }
 @media (max-width: 768px) {
-  header .icon .logo {
-    margin: 0;
+  body header .icon .logo {
+    margin-left: 0;
   }
-  header .menu {
+  body header .icon .logo .logo-mob {
     display: none;
+  }
+  body header .menu {
+    display: none;
+  }
+  body .block1 img {
+    height: 520px;
+  }
+  body .block1 .rectangle {
+    font-size: 26px;
+    top: 260px;
+  }
+  body .block1 .rectangle .title1 {
+    left: auto;
+    right: 6vw;
   }
 }
 @media (max-width: 700px) {
-  header {
+  body header {
     height: 60px;
   }
-  header .icon .logo {
+  body header .icon .logo {
     display: none;
   }
-  header .icon .logo-mob {
+  body header .icon .logo-mob {
     margin-left: 6vw;
-    display: inline-block;
+    display: block;
   }
-  header .icons {
+  body header .icons {
     position: absolute;
     right: 6vw;
     top: 15px;
   }
-  header .icons img {
+  body header .icons img {
     justify-content: center;
     margin-left: 27px;
     height: 30px;
     width: 30px;
   }
-  header .icons .nav-button {
+  body header .icons .nav-button {
     position: relative;
     top: 3px;
     display: inline-block;
+  }
+}
+@media (max-width: 520px) {
+  body .block1 .rectangle {
+    font-size: 20px;
+    top: 260px;
+    height: 100px;
+  }
+}
+@media (max-width: 410px) {
+  body .block1 img {
+    height: 433px;
+    top: -33px;
+  }
+  body .block1 .rectangle {
+    top: 176px;
+    width: 90%;
+    font-size: 15px;
+    font-weight: 600;
   }
 }
 footer {
