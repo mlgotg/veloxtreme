@@ -189,7 +189,9 @@
 
     // get how much have we scrolled to the left
     var MenuPosition = 0;
-
+    // var getMenuPosition = function() {
+    //     return $('.menu').scrollX();
+    // };
     // finally, what happens when we are actually scrolling the menu
     $('.menu').on('scroll', function() {
 
@@ -197,7 +199,7 @@
         menuInvisibleSize = menuSize - menuWrapperSize;
         // get how much have we scrolled so far
 
-        var menuEndOffset = 1200;
+        var menuEndOffset = 400 * Math.floor(menuInvisibleSize / 400);
 
         // show & hide the paddles
         // depending on scroll position
@@ -213,12 +215,6 @@
             $(leftPaddle).removeClass('hidden');
             $(rightPaddle).addClass('hidden');
         }
-
-        // print important values
-        $('#print-wrapper-size span').text(menuWrapperSize);
-        $('#print-menu-size span').text(menuSize);
-        $('#print-menu-invisible-size span').text(menuInvisibleSize);
-        $('#print-menu-position span').text(MenuPosition);
 
     });
 
