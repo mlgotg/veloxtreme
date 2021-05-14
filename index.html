@@ -199,35 +199,42 @@
         menuInvisibleSize = menuSize - menuWrapperSize;
         // get how much have we scrolled so far
 
-        var menuEndOffset = 400 * Math.floor(menuInvisibleSize / 400);
+        var menuEndOffset = 400 * Math.floor(Math.ceil(menuInvisibleSize / 400));
 
         // show & hide the paddles
         // depending on scroll position
 
-        if (MenuPosition <= paddleMargin) {
-            $(leftPaddle).addClass('hidden');
-            $(rightPaddle).removeClass('hidden');
-        } else if (MenuPosition < menuEndOffset) {
-            // show both paddles in the middle
-            $(leftPaddle).removeClass('hidden');
-            $(rightPaddle).removeClass('hidden');
-        } else if (MenuPosition >= menuEndOffset) {
-            $(leftPaddle).removeClass('hidden');
-            $(rightPaddle).addClass('hidden');
-        }
+        // if (menuInvisibleSize === 0){
+        //     $(leftPaddle).addClass('hidden');
+        //     $(rightPaddle).addClass('hidden');
+        // } else if (MenuPosition < menuEndOffset) {
+        //     // show both paddles in the middle
+        //     $(leftPaddle).removeClass('hidden');
+        //     $(rightPaddle).removeClass('hidden');
+        // } else if (MenuPosition >= menuEndOffset) {
+        //     $(leftPaddle).removeClass('hidden');
+        //     $(rightPaddle).addClass('hidden');
+        // } else if (MenuPosition <= paddleMargin) {
+        //     $(leftPaddle).addClass('hidden');
+        //     $(rightPaddle).removeClass('hidden');
+        // }
 
     });
 
     // scroll to left
     $(rightPaddle).on('click', function() {
         $('.menu').animate( { scrollLeft: MenuPosition + 400}, scrollDuration);
-        MenuPosition = MenuPosition + 400;
+        if(MenuPosition < itemSize * 4){
+            MenuPosition = MenuPosition + 400;
+        }
     });
 
     // scroll to right
     $(leftPaddle).on('click', function() {
         $('.menu').animate( { scrollLeft: MenuPosition - 400 }, scrollDuration);
-        MenuPosition = MenuPosition - 400;
+        if(MenuPosition > 0) {
+            MenuPosition = MenuPosition - 400;
+        }
     });
 </script>
 

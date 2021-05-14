@@ -244,9 +244,6 @@ body .brands .block .right-paddle {
 body .brands .block .right-paddle img {
   transform: scale(-1, 1);
 }
-body .brands .hidden {
-  display: none;
-}
 body .sidenav {
   height: 100%;
   width: 0;
