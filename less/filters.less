@@ -61,6 +61,25 @@
       border-right: 1px solid @blue;
       border-bottom: 1px solid @blue;
       border-left: 0;
+      .price-slider{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 25px;
+        input[type="text"]{
+          width: 100px;
+          height: 30px;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          background: @lightblue;
+          border: 1px solid @blue;
+          border-radius: 0;
+          padding-left: 8px;
+          &:active, &:focus{
+            outline: none;
+          }
+        }
+      }
       .checkbox-filter {
         padding: 8px 4px;
         input[type="checkbox"]{

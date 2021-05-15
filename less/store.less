@@ -4,8 +4,13 @@
 @font1: 'Open Sans', sans-serif;
 @font-for-price: 'Fira Sans', sans-serif;
 body{
+  h1{
+    font-weight: normal;
+    margin: 20px 0 20px 20px;
+  }
   .sidefilter{
-    height: 100%;
+    display: flex;
+    flex-direction: column;
     width: 0;
     border-right: 1px solid @blue;
     position: fixed;
@@ -13,24 +18,31 @@ body{
     top: 0;
     left: -1px;
     background-color: @lightblue;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px;
+    overflow-x: hidden;
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling:touch;
     transition: 0.5s;
     font-family: @font1;
-    .closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-    }
-    a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 20px;
-      color: @darkblue;
-      display: block;
-      transition: 0.3s;
+    overflow-scrolling: touch;
+    .close-button {
+      display: flex;
+      justify-content: flex-end;
+      .closebtn {
+        display: flex;
+        justify-content: center;
+        font-size: 36px;
+        width: 60px;
+        height: 60px;
+      }
+      a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 20px;
+        color: @darkblue;
+        display: block;
+        transition: 0.3s;
+      }
     }
     .filter-section{
       .filters {
@@ -78,7 +90,9 @@ body{
           background-position: right center;
           appearance: none;
           padding-right: 30px;
-
+          &:active, &:focus{
+            outline: none;
+          }
           option{
             background: @lightblue;
             border: 1px solid @blue;
@@ -97,13 +111,12 @@ body{
         flex-direction: column;
         flex-wrap: wrap;
         border: 1px solid @blue;
+        background: @lightblue;
         margin: 0 -1px -1px 0;
         width: 33.21%;
-
         a {
           text-decoration: none;
           color: @darkblue;
-
           img {
             width: 100%;
           }
@@ -143,6 +156,9 @@ body{
           }
         }
       }
+      .store-item:hover{
+        box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      }
     }
   }
   @media (max-width: 1340px) {
@@ -152,6 +168,15 @@ body{
         .store-header-filter {
           .filter-label {
             width: 268px;
+          }
+        }
+        .filters {
+          .content {
+            .price-slider{
+              input[type="text"]{
+                width: 80px;
+              }
+            }
           }
         }
       }
@@ -299,6 +324,20 @@ body{
                   font-size: 20px;
                   line-height: 28px;
                 }
+                .price-buy{
+                  span{
+                    font-size: 28px;
+                    line-height: 36px;
+                  }
+                  button{
+                    width: 40px;
+                    height: 40px;
+                    img{
+                      width: 36px;
+                      height: 36px;
+                    }
+                  }
+                }
               }
             }
           }
@@ -310,6 +349,7 @@ body{
 .pagination{
   display: flex;
   justify-content: center;
+  margin: 30px 0 60px 0;
   .pagination-list{
     display: flex;
     flex-direction: row;

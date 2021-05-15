@@ -40,10 +40,7 @@
     </script>
   </div>
 </header>
-  <br><br><br><br><br><br><br><br>
-
-
-
+  <h1>Велосипеди</h1>
   <div class="store-section">
     <div class="filter-section">
       <div class="store-header-filter">
@@ -74,6 +71,15 @@
           <div class="checkbox-filter">
             <input type="checkbox" id="electro-sidefilter" name="electro-sidefilter">
             <label for="electro-sidefilter">Електробайки</label>
+          </div>
+        </div>
+      </div>
+      <div class="filters">
+        <button type="button" class="collapsible active"><img class="arrow" src="image/icons/down-arrow.svg">Ціна</button>
+        <div class="content" style="display: block;">
+          <div class="price-slider">
+            <input type="text" placeholder="Від">
+            <input type="text" placeholder="До">
           </div>
         </div>
       </div>
@@ -259,10 +265,10 @@
       </li>
     </ul>
   </div>
-  <br><br><br><br><br><br>
-
   <div id="mySidefilter" class="sidefilter">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeFilter()">&times;</a>
+    <div class="close-button">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeFilter()">&times;</a>
+    </div>
     <div class="filter-section">
       <div class="filters">
         <button type="button" class="collapsible active"><img class="arrow" src="image/icons/down-arrow.svg">Велосипеди</button>
@@ -286,6 +292,15 @@
           <div class="checkbox-filter">
             <input type="checkbox" id="electro" name="electro">
             <label for="electro">Електробайки</label>
+          </div>
+        </div>
+      </div>
+      <div class="filters">
+        <button type="button" class="collapsible active"><img class="arrow" src="image/icons/down-arrow.svg">Ціна</button>
+        <div class="content" style="display: block;">
+          <div class="price-slider">
+            <input type="text" placeholder="Від">
+            <input type="text" placeholder="До">
           </div>
         </div>
       </div>

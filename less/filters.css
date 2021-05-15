@@ -54,6 +54,26 @@
   border-bottom: 1px solid #78A1BB;
   border-left: 0;
 }
+.filter-section .filters .content .price-slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 25px;
+}
+.filter-section .filters .content .price-slider input[type="text"] {
+  width: 100px;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background: #EBF5EE;
+  border: 1px solid #78A1BB;
+  border-radius: 0;
+  padding-left: 8px;
+}
+.filter-section .filters .content .price-slider input[type="text"]:active,
+.filter-section .filters .content .price-slider input[type="text"]:focus {
+  outline: none;
+}
 .filter-section .filters .content .checkbox-filter {
   padding: 8px 4px;
 }
