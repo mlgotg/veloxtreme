@@ -45,6 +45,10 @@ body .sidefilter .filter-section .filters .collapsible {
 body .sidefilter .filter-section .filters .content {
   border-right: 0;
 }
+body .sidefilter::-webkit-scrollbar {
+  background-color: #EBF5EE;
+  width: 0;
+}
 .store-section {
   display: flex;
   border: 1px solid #78A1BB;
