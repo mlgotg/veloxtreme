@@ -74,10 +74,10 @@
 .filter-section .filters .content .price-slider input[type="text"]:focus {
   outline: none;
 }
-.filter-section .filters .content .checkbox-filter {
+.checkbox-filter {
   padding: 8px 4px;
 }
-.filter-section .filters .content .checkbox-filter input[type="checkbox"] {
+.checkbox-filter input[type="checkbox"] {
   border: 1px solid #78A1BB;
   width: 16px;
   height: 16px;
@@ -86,13 +86,13 @@
   appearance: none;
   cursor: pointer;
 }
-.filter-section .filters .content .checkbox-filter input[type="checkbox"]:checked {
+.checkbox-filter input[type="checkbox"]:checked {
   background-color: #283044;
   background-image: url("../image/icons/check-mark.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
-.filter-section .filters .content .checkbox-filter label {
+.checkbox-filter label {
   display: inline-block;
   cursor: pointer;
 }
