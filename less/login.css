@@ -17,16 +17,6 @@
   width: 30%;
   height: 390px;
 }
-.modal .modal-content .close {
-  display: flex;
-  justify-content: flex-end;
-  color: #283044;
-  font-size: 48px;
-}
-.modal .modal-content .close div {
-  cursor: pointer;
-  padding: 0 16px;
-}
 .modal .modal-content h2 {
   font-weight: normal;
   margin-left: 12%;
@@ -36,27 +26,6 @@
   display: flex;
   flex-direction: column;
   padding: 0 12%;
-}
-.modal .modal-content .login-body .login-info {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-}
-.modal .modal-content .login-body .login-info label {
-  color: #283044;
-  opacity: 0.66;
-  font-size: 14px;
-}
-.modal .modal-content .login-body .login-info input {
-  height: 30px;
-  background: #EBF5EE;
-  border: 1px solid #78A1BB;
-  border-radius: 0;
-  padding-left: 8px;
-}
-.modal .modal-content .login-body .login-info input:active,
-.modal .modal-content .login-body .login-info input:focus {
-  outline: none;
 }
 .modal .modal-content .login-body .submit-section {
   display: flex;
@@ -94,6 +63,37 @@
 }
 .modal .signup {
   height: 680px;
+}
+.login-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.login-info label {
+  color: #283044;
+  opacity: 0.66;
+  font-size: 14px;
+}
+.login-info input {
+  height: 30px;
+  background: #EBF5EE;
+  border: 1px solid #78A1BB;
+  border-radius: 0;
+  padding-left: 8px;
+}
+.login-info input:active,
+.login-info input:focus {
+  outline: none;
+}
+.close {
+  display: flex;
+  justify-content: flex-end;
+  color: #283044;
+  font-size: 48px;
+}
+.close div {
+  cursor: pointer;
+  padding: 0 16px;
 }
 .animate {
   -webkit-animation: animatezoom 0.6s;

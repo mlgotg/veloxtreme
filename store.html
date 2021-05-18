@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="less/store.css">
   <link rel="stylesheet" href="less/filters.css">
   <link rel="stylesheet" href="less/login.css">
+  <link rel="stylesheet" href="less/search.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Open+Sans&display=swap" rel="stylesheet">
@@ -27,7 +28,7 @@
     <a>Контакти</a>
   </div>
   <div class="icons">
-    <img src="image/icons/loupe.svg">
+    <img src="image/icons/loupe.svg" onclick="openSearch()">
     <img src="image/icons/account.svg" onclick="openLogin()">
     <img src="image/icons/shopping-backet.svg">
     <img src="image/icons/menu.svg" onclick="openNav()" class="nav-button">
@@ -431,6 +432,17 @@
       </div>
     </form>
   </div>
+  <div id="search">
+    <div class="animate">
+      <div class="login-info">
+        <input type="text" placeholder="Пошук" name="search" required>
+      </div>
+      <div class="search-button">
+        <img src="image/icons/loupe-dark-blue.svg">
+      </div>
+      <div class="close" title="Close Modal"><div onclick="closeSearch()">&times;</div></div>
+    </div>
+  </div>
   <footer>
     <div class="footer-nav hidden-2">
       <a href="#"><h3>Велосипеди</h3></a>
@@ -526,10 +538,12 @@
   <script>
     var modal = document.getElementById('login-form');
     var modal2 = document.getElementById('signup-form')
+    var modal3 = document.getElementById('search')
     window.onclick = function(event) {
-      if (event.target === modal || event.target === modal2) {
+      if (event.target === modal || event.target === modal2 || event.target === modal3) {
         modal.style.display = "none"
         modal2.style.display = "none"
+        modal3.style.display = "none"
       }
     }
 
@@ -550,6 +564,16 @@
 
     function closeRegister() {
       document.getElementById('signup-form').style.display='none'
+      document.body.removeAttribute('style')
+    }
+
+    function openSearch() {
+      document.getElementById('search').style.display='flex'
+      document.body.style.overflow='hidden'
+    }
+
+    function closeSearch() {
+      document.getElementById('search').style.display='none'
       document.body.removeAttribute('style')
     }
 

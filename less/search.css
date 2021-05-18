@@ -1,0 +1,75 @@
+#search {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#search .animate {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+  width: 50%;
+}
+#search .animate .login-info {
+  display: block;
+  margin-top: 80px;
+  height: 34px;
+  width: 80%;
+}
+#search .animate .login-info input[type="text"] {
+  border-right: 0;
+  width: 100%;
+}
+#search .animate .search-button {
+  margin-top: 80px;
+  height: 34px;
+  background: #EBF5EE;
+  border: 1px solid #78A1BB;
+  border-left: 0;
+  border-right: 0;
+  box-sizing: border-box;
+}
+#search .animate .search-button img {
+  padding: 8px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+#search .animate .close {
+  margin-top: 80px;
+  color: #283044;
+  font-size: 32px;
+  height: 34px;
+  background: #EBF5EE;
+  border: 1px solid #78A1BB;
+  border-left: 0;
+  box-sizing: border-box;
+}
+#search .animate .close div {
+  cursor: pointer;
+  padding: 0 8px;
+  line-height: 34px;
+}
+@media (max-width: 700px) {
+  #search .animate {
+    width: 88%;
+  }
+  #search .animate .login-info {
+    width: 90%;
+    margin-top: 60px;
+  }
+  #search .animate .search-button {
+    margin-top: 60px;
+  }
+  #search .animate .close {
+    margin-top: 60px;
+  }
+}
+/*# sourceMappingURL=search.css.map */
